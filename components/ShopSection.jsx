@@ -5,9 +5,7 @@ import products from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 
 export default function ShopSection() {
-  const featured = products.filter((p) =>
-    ["Bestseller", "New Arrival", "Premium"].includes(p.badge)
-  ).slice(0, 4);
+  const featured = products.slice(0, 4);
 
   return (
     <section id="shop" className="bg-blush/30 py-20 sm:py-28">
