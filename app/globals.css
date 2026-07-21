@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background: #6e0f1f;
+  color: #fbf7f1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbf7f1;
+  color: #171412;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #6e0f1f;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* subtle repeating motif used as a section backdrop */
+.motif-bg {
+  background-image: radial-gradient(circle at 1px 1px, rgba(110, 15, 31, 0.14) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.text-shadow-soft {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shop page enhancements */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* Custom scrollbar for cart drawer */
+.cart-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.cart-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.cart-scrollbar::-webkit-scrollbar-thumb {
+  background: #e7ded4;
+  border-radius: 4px;
+}
+.cart-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #6e0f1f;
+}
