@@ -59,6 +59,15 @@ export default function ShopPage() {
             backgroundSize: "24px 24px"
           }} />
         </div>
+        <Link
+          href="/"
+          className="absolute top-3 left-5 sm:top-32 sm:left-8 z-10 inline-flex items-center gap-2 bg-maroon text-ivory font-body text-xs uppercase tracking-wider px-5 py-2.5 rounded-full hover:bg-maroon-bright transition-colors active:scale-95"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          </svg>
+          Back
+        </Link>
         <div className="relative max-w-6xl mx-auto px-5 sm:px-8 text-center">
           <span className="font-body text-xs uppercase tracking-widest2 text-blush fade-up">
             Bridal Collection
